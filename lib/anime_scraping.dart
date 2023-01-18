@@ -4,3 +4,4 @@
 library anime_scraping;
 
 export 'src/anime_scraping_base.dart';
+export 'model/model.dart';
