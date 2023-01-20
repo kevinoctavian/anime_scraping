@@ -12,7 +12,7 @@ void main(List<String> args) async {
 
   // AnimeScraping().home().then(print);
   // AnimeScraping().anime('chaisaw-sub-indo').then(print);
-  // AnimeScraping().episode('cm-episode-12-sub-indo').then(print);
+  // AnimeScraping().episode('mipon-episode-1-sub-indo').then(print);
   //   AnimeScraping().downloadLink(value[0]).then(print);
   //   sleep(Duration(seconds: 2));
   //   AnimeScraping().downloadLinks(value).then(print);

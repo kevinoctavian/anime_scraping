@@ -115,19 +115,19 @@ class AnimeScraping {
 
         if (RegExp(r'mkv').hasMatch(title)) return EpisodeModel('', '', '');
 
-        String? url;
+        String url = '';
         for (var a in e.getElementsByTagName('a')) {
           // print(a.text);
-          String text = a.text.toLowerCase();
+          String text = a.text.toLowerCase().trim();
           if (text == 'zippyshare' || text == 'zippy') {
-            url = a.attributes['href'];
+            url = a.attributes['href']!;
             break;
           }
         }
 
         return EpisodeModel(
           title.replaceAll(RegExp(r'mp4+'), '').trim(),
-          url!,
+          url,
           e.getElementsByTagName('i')[0].text,
         );
       }).toList();
