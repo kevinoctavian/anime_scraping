@@ -132,11 +132,10 @@ class AnimeScraping {
         );
       }).toList();
 
-      res = download;
-    }
-
-    for (var d in res) {
-      if (d.url.isEmpty && d.resolusi.isEmpty && d.size.isEmpty) res.remove(d);
+      for (var d in download) {
+        if (d.url.isNotEmpty && d.resolusi.isNotEmpty && d.size.isNotEmpty)
+          res.add(d);
+      }
     }
 
     return res;
