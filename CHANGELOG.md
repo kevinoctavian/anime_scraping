@@ -1,10 +1,14 @@
+## 1.0.4
+
+- bug fixed
+
+## 1.0.3
+
+- bug fixed
+
 ## 1.0.2
 
-- bug fixed 
-
-## 1.0.2
-
-- bug fixed for flutter can't get link from episode method 
+- bug fixed for flutter can't get link from episode method
 
 ## 1.0.1
 

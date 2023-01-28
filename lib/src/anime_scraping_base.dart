@@ -5,7 +5,7 @@ import 'package:html/parser.dart';
 class AnimeScraping {
   late String? baseUrl;
 
-  AnimeScraping({this.baseUrl = 'https://otakudesu.is'});
+  AnimeScraping({this.baseUrl = 'https://otakudesu.asia'});
 
   Future<String> _request(String path) async {
     Uri uri = Uri.parse(baseUrl! + path);
@@ -21,8 +21,8 @@ class AnimeScraping {
     return anime;
   }
 
-  Future<List<ListAnimeModel>> complete() async {
-    var anime = await _listAnime('complete-anime/');
+  Future<List<ListAnimeModel>> complete([int page = 1]) async {
+    var anime = await _listAnime('complete-anime/page/$page/');
     anime.remove(anime.last);
 
     return anime;
@@ -133,8 +133,9 @@ class AnimeScraping {
       }).toList();
 
       for (var d in download) {
-        if (d.url.isNotEmpty && d.resolusi.isNotEmpty && d.size.isNotEmpty)
+        if (d.url.isNotEmpty && d.resolusi.isNotEmpty && d.size.isNotEmpty) {
           res.add(d);
+        }
       }
     }
 

@@ -1,12 +1,9 @@
-import 'dart:io';
-
 import 'package:anime_scraping/anime_scraping.dart';
-import 'package:anime_scraping/model/list_anime_model.dart';
 
 void main(List<String> args) async {
   AnimeScraping anime = AnimeScraping();
 
-  List<ListAnimeModel> ongoing = await anime.ongoing();
+  List<ListAnimeModel> ongoing = await anime.complete(1);
 
   print(ongoing);
 
